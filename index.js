@@ -3,7 +3,7 @@
 
 let votingAge = 18;
 
-    if(votingAge > 18){
+if (votingAge > 18) {
     console.log(true);
 }
 
@@ -15,9 +15,9 @@ let votingAge = 18;
 
 let name = "Joseph"; // Variable
 
-if(name !== "Joseph") { // Conditional
-       name = "Samuel";
-       console.log("Your new name is " + name);
+if (name !== "Joseph") { // Conditional
+    name = "Samuel";
+    console.log("Your new name is " + name);
 } else {
     console.log("Welcome " + name);
 }
@@ -26,14 +26,14 @@ if(name !== "Joseph") { // Conditional
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-let year =  "1999";
+let year = "1999";
 
 console.log(parseInt(year));
 
 
 //Task d: Write a function to multiply a*b 
 
-function multiply(a, b){
+function multiply(a, b) {
     return a * b;
 }
 
@@ -46,7 +46,13 @@ console.log(multiply(5, 5));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let dogYears = 7;
 
+function convert(age) {
+    return age * dogYears;
+}
+
+console.log(convert(21));
 
 
 
@@ -64,11 +70,24 @@ console.log(multiply(5, 5));
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight 
-// 7 - 12 months 4% of their body weight
+// 7 - 12 months 4% o their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+// function feeder(age, weight){
+//     // Atleast One year
+//     if(age >= 1){
+//         if(weight === 15){
+//             return age * weight;
+//         } 
+//     // } else {
+//     //     if(weight === "2 lbs")
+
+//     }
+
+// }
+
+// console.log(feeder(3, 15));
 
 
 
@@ -79,31 +98,51 @@ console.log(multiply(5, 5));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+// function game(string){
+//     if(string === "rock"){
+//         return "You Win!";
+//     } else if(string === "paper"){
+//         return "You Lose!"
+//     } else if(string === "sissors"){
+//         return "You Lose!"
+//     }
+// }
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function convertMiles(km) {
+    let oneKm = .621371;
+    return oneKm * km;
+}
 
+console.log(convertMiles(10));
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
-
+function convertFeet(cm) {
+    let oneFoot = 30.48;
+    return oneFoot * cm;
+}
+console.log(convertFeet(20));
 
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
-
-
+function annoyingSong(num) {
+    for (i = num; i >= 0; i--) {
+        console.log(i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + i + " bottles of soda on the wall,");
+    }
+}
+annoyingSong(5);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -113,10 +152,10 @@ console.log(multiply(5, 5));
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
-  
+
+
+
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
@@ -130,8 +169,3 @@ console.log(multiply(5, 5));
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-

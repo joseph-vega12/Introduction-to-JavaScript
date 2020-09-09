@@ -70,41 +70,30 @@ console.log(convert(21));
 // 7 - 12 months 4% o their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-// function feed(age, weight){
-//     if(age >= 1){
-//         if(weight <= 5){
-//             return .05* weight
-//         }
 
+function feeder(age, weight) {
+    if (age >= 1) {
+        if (weight <= 5) {
+            return .05 * weight
+        } else if (weight <= 10) {
+            return .04 * weight
+        } else if (weight <= 15) {
+            return .03 * weight
+        } else if (weight >= 15) {
+            return .02 * weight;
+        }
+    } else if (age <= 1) {
+        if (age < 0.333333) {
+            return .1 * weight;
+        } else if (age < .58333333333) {
+            return .05 * weight;
+        } else {
+            return 0.4 * weight;
+        }
+    }
+}
 
-//     } else{
-//         else if(age < 0.333333){
-//         return .1 * weight;
-//     } else if( age < .58333333333){
-//         return .05 * weight;
-//     } else {
-//         return 0.4 * weight;
-//     }
-//     }
-// }
-
-
-// function feeder(age, weight){
-//     // Atleast One year
-//     if(age >= 1){
-//         if(weight === 15){
-//             return age * weight;
-//         } 
-//     // } else {
-//     //     if(weight === "2 lbs")
-
-//     }
-
-// }
-
-// console.log(feeder(3, 15));
-
-
+console.log(feeder(1, 15));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -113,23 +102,21 @@ console.log(convert(21));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-    let rock = 1;
-    let paper = 2;
-    let scissors = 3;
+let rock = 1;
+let paper = 2;
+let scissors = 3;
 
 function game(string) {
-   
+
     let randNum = Math.ceil(Math.random() * 3); //Generates Random Number
-    
-    if(string === randNum){
+
+    if (string === randNum) {
         return "You Win!"
     } else {
         return "You Lose!"
     }
 }
 console.log(game(rock));
-
-
 
 
 /************************************************************** Task 5 **************************************************************/
@@ -142,7 +129,6 @@ function convertMiles(km) {
 }
 
 console.log(convertMiles(10));
-
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
@@ -207,5 +193,3 @@ console.log(grade(70));
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-

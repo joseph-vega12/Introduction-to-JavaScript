@@ -8,9 +8,6 @@ if (votingAge > 18) {
 }
 
 
-
-
-
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 let name = "Joseph"; // Variable
@@ -73,6 +70,24 @@ console.log(convert(21));
 // 7 - 12 months 4% o their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
+// function feed(age, weight){
+//     if(age >= 1){
+//         if(weight <= 5){
+//             return .05* weight
+//         }
+
+
+//     } else{
+//         else if(age < 0.333333){
+//         return .1 * weight;
+//     } else if( age < .58333333333){
+//         return .05 * weight;
+//     } else {
+//         return 0.4 * weight;
+//     }
+//     }
+// }
+
 
 // function feeder(age, weight){
 //     // Atleast One year
@@ -98,15 +113,22 @@ console.log(convert(21));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-// function game(string){
-//     if(string === "rock"){
-//         return "You Win!";
-//     } else if(string === "paper"){
-//         return "You Lose!"
-//     } else if(string === "sissors"){
-//         return "You Lose!"
-//     }
-// }
+    let rock = 1;
+    let paper = 2;
+    let scissors = 3;
+
+function game(string) {
+   
+    let randNum = Math.ceil(Math.random() * 3); //Generates Random Number
+    
+    if(string === randNum){
+        return "You Win!"
+    } else {
+        return "You Lose!"
+    }
+}
+console.log(game(rock));
+
 
 
 
@@ -153,6 +175,22 @@ annoyingSong(5);
 //60s should be D 
 //and anything below 60 should be F
 
+function grade(a) {
+    if (a >= 90) {
+        return "A Grade";
+    } else if (a >= 80) {
+        return "B Grade";
+    } else if (a >= 70) {
+        return "C Grade";
+    }
+    else if (a >= 60) {
+        return "D Grade";
+    } else if (a < 60) {
+        return "F Grade";
+    }
+}
+
+console.log(grade(70));
 
 
 
@@ -169,3 +207,5 @@ annoyingSong(5);
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+
